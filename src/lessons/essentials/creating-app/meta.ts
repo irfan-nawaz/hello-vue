@@ -1,0 +1,32 @@
+import type { LessonMeta } from '../../types'
+
+export default {
+  title: 'Creating an Application',
+  summary: 'The app instance: mount/unmount, global registration, plugins, provide and every app.config option.',
+  order: 1,
+  guide: ['Creating an Application'],
+  apis: [
+    'createApp()',
+    'app.mount()',
+    'app.unmount()',
+    'app.onUnmount()',
+    'app.component()',
+    'app.directive()',
+    'app.use()',
+    'app.mixin()',
+    'app.provide()',
+    'app.runWithContext()',
+    'app.version',
+    'version',
+    'app.config',
+    'app.config.errorHandler',
+    'app.config.warnHandler',
+    'app.config.performance',
+    'app.config.compilerOptions',
+    'app.config.globalProperties',
+    'app.config.optionMergeStrategies',
+    'app.config.idPrefix',
+    'app.config.throwUnhandledErrorInProduction',
+  ],
+  docs: 'https://vuejs.org/guide/essentials/application.html',
+} satisfies LessonMeta

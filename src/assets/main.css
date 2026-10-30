@@ -1,0 +1,216 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap');
+
+@import 'tailwindcss';
+@import "tw-animate-css";
+@import "shadcn-vue/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+    --font-sans: 'Geist', sans-serif;
+    --font-heading: var(--font-sans);
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar: var(--sidebar);
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.145 0 0);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.145 0 0);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.145 0 0);
+    --primary: oklch(0.205 0 0);
+    --primary-foreground: oklch(0.985 0 0);
+    --secondary: oklch(0.97 0 0);
+    --secondary-foreground: oklch(0.205 0 0);
+    --muted: oklch(0.97 0 0);
+    --muted-foreground: oklch(0.556 0 0);
+    --accent: oklch(0.97 0 0);
+    --accent-foreground: oklch(0.205 0 0);
+    --destructive: oklch(0.577 0.245 27.325);
+    --border: oklch(0.922 0 0);
+    --input: oklch(0.922 0 0);
+    --ring: oklch(0.708 0 0);
+    --chart-1: oklch(0.87 0 0);
+    --chart-2: oklch(0.556 0 0);
+    --chart-3: oklch(0.439 0 0);
+    --chart-4: oklch(0.371 0 0);
+    --chart-5: oklch(0.269 0 0);
+    --radius: 0.625rem;
+    --sidebar: oklch(0.985 0 0);
+    --sidebar-foreground: oklch(0.145 0 0);
+    --sidebar-primary: oklch(0.205 0 0);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.97 0 0);
+    --sidebar-accent-foreground: oklch(0.205 0 0);
+    --sidebar-border: oklch(0.922 0 0);
+    --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.205 0 0);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.205 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: oklch(0.922 0 0);
+    --primary-foreground: oklch(0.205 0 0);
+    --secondary: oklch(0.269 0 0);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.269 0 0);
+    --muted-foreground: oklch(0.708 0 0);
+    --accent: oklch(0.269 0 0);
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: oklch(0.704 0.191 22.216);
+    --border: oklch(1 0 0 / 10%);
+    --input: oklch(1 0 0 / 15%);
+    --ring: oklch(0.556 0 0);
+    --chart-1: oklch(0.87 0 0);
+    --chart-2: oklch(0.556 0 0);
+    --chart-3: oklch(0.439 0 0);
+    --chart-4: oklch(0.371 0 0);
+    --chart-5: oklch(0.269 0 0);
+    --sidebar: oklch(0.205 0 0);
+    --sidebar-foreground: oklch(0.985 0 0);
+    --sidebar-primary: oklch(0.488 0.243 264.376);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.269 0 0);
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(1 0 0 / 10%);
+    --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground;
+    @apply font-sans;
+    }
+}
+/* ---------- Vue Lab ---------- */
+@theme inline {
+  --color-vue: oklch(0.69 0.14 160);
+  --color-vue-foreground: oklch(0.99 0 0);
+  --font-mono: 'Geist Mono', ui-monospace, monospace;
+}
+
+/* Long-form lesson text */
+.lesson-prose {
+  @apply max-w-none text-[0.95rem] leading-7 text-foreground/90;
+}
+.lesson-prose h2 {
+  @apply mt-10 mb-3 scroll-mt-20 text-xl font-semibold tracking-tight text-foreground;
+}
+.lesson-prose h3 {
+  @apply mt-6 mb-2 text-base font-semibold text-foreground;
+}
+.lesson-prose p {
+  @apply my-3;
+}
+.lesson-prose ul {
+  @apply my-3 ml-5 list-disc space-y-1;
+}
+.lesson-prose ol {
+  @apply my-3 ml-5 list-decimal space-y-1;
+}
+.lesson-prose :not(pre) > code {
+  @apply rounded bg-muted px-1.5 py-0.5 font-mono text-[0.85em] text-foreground;
+}
+.lesson-prose a {
+  @apply text-vue underline underline-offset-4;
+}
+.lesson-prose table {
+  @apply my-4 w-full text-sm;
+}
+.lesson-prose th {
+  @apply border-b p-2 text-left font-semibold;
+}
+.lesson-prose td {
+  @apply border-b p-2 align-top;
+}
+
+/* Shiki dual themes */
+.shiki {
+  @apply overflow-x-auto rounded-lg p-4 text-[0.8rem] leading-6;
+}
+.dark .shiki,
+.dark .shiki span {
+  color: var(--shiki-dark) !important;
+  background-color: var(--shiki-dark-bg) !important;
+}
+
+/* Demo widgets: plain elements styled consistently without importing shadcn everywhere */
+.demo button:not([data-slot]) {
+  @apply inline-flex h-8 items-center gap-1 rounded-md border bg-background px-3 text-sm font-medium transition hover:bg-muted active:translate-y-px disabled:opacity-50;
+}
+.demo input:not([type='checkbox']):not([type='radio']):not([type='range']):not([data-slot]),
+.demo select:not([data-slot]),
+.demo textarea:not([data-slot]) {
+  @apply h-8 rounded-md border bg-background px-2 text-sm outline-none focus:ring-2 focus:ring-vue/40;
+}
+.demo textarea:not([data-slot]) {
+  @apply h-auto py-1;
+}
+.demo input[type='checkbox'],
+.demo input[type='radio'] {
+  @apply accent-vue;
+}
+.demo input[type='range'] {
+  @apply accent-vue;
+}
+.demo .row {
+  @apply flex flex-wrap items-center gap-2;
+}
+.demo .stack {
+  @apply flex flex-col gap-3;
+}
+.demo .box {
+  @apply rounded-lg border p-3;
+}
+.demo .label {
+  @apply text-xs font-medium tracking-wide text-muted-foreground uppercase;
+}
+.demo .mono {
+  @apply font-mono text-xs;
+}
